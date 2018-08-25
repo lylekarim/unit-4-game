@@ -24,13 +24,15 @@ $(document).ready(function () {
         $(".crystals, #summarizer, #verdict, #computer-guess").empty();
         $('#verdict').hide();
         $('#reset').hide();
-
+        computerGuess = Math.floor(Math.random() * 121) + 1;
     }
 
     $("#reset").on("click", function () {
 
         // Call initializeCalculater so we can reset the state of our app
         initializeGame();
+        pickCrystalNumbers()
+        computerGuess = Math.floor(Math.random() * 121) + 1;
 
     });
 
